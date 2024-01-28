@@ -62,7 +62,6 @@ eta0=c(0,0)
 sigma0=matrix(c(100,0,0,100),nrow=2)
 
 sigma.star=matrix(c(0.001,-0.001,-0.001,0.001),nrow=2)
-
 #---------------------------------------------------------------
 beta1.star=beta2.star=numeric(T-1)
 beta1.bayes=beta2.bayes=numeric(T)
@@ -96,7 +95,6 @@ u.bayes1[t,jj]=u.bayes1[(t-1),jj]
 }
 }
 #---------------------------------------------------------------
-
 teta=mvrnorm(1,c(beta1.bayes[t-1],beta2.bayes[t-1]),sigma.star)
 beta1.star[t]=teta[1]
 beta2.star[t]=teta[2]
